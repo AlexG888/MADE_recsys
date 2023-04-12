@@ -25,7 +25,6 @@ class Catalog:
         self.top_tracks = []
         self.tracks_with_diverse_recs = []
 
-    # TODO Seminar 6 step 1: Configure reading tracks with diverse recommendations
     def load(self, catalog_path, top_tracks_path, tracks_with_diverse_recs_path):
         self.app.logger.info(f"Loading tracks from {catalog_path}")
         with open(catalog_path) as catalog_file:
@@ -64,7 +63,6 @@ class Catalog:
 
         return self
 
-    # TODO Seminar 6 step 2: Configure uploading tracks with diverse recommendations to redis DB
     def upload_tracks(self, redis_tracks, redis_tracks_with_diverse_recs):
         self.app.logger.info(f"Uploading tracks to redis")
         for track in self.tracks:
